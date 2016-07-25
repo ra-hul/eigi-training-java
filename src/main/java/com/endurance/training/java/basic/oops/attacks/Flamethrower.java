@@ -15,9 +15,9 @@ public class Flamethrower implements IAttack
     }
 
     @Override
-    public String doAttack()
+    public void doAttack()
     {
-        return "Wooosh";
+        System.out.println("Wooosh");
     }
 
     @Override

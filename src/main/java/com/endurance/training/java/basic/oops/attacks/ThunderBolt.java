@@ -9,9 +9,9 @@ import java.util.List;
 public class ThunderBolt implements IAttack
 {
     @Override
-    public String doAttack()
+    public void doAttack()
     {
-        return "Bzzz..Bzzz..";
+        System.out.println("Bzzz..Bzzz..");
     }
 
     @Override

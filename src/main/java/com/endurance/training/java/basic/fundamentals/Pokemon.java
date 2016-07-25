@@ -1,27 +1,17 @@
-package com.endurance.training.java.basic.pokedex;
+package com.endurance.training.java.basic.fundamentals;
 
 /**
  * Created by rahul.go on 25/07/16.
  */
 public class Pokemon
 {
+    public static final String CREDITS = "Nintendo";
     private String name;
     private double height;
     private double weight;
     private String type;
     private int combatPower;
     private int hitPoints;
-    public static final String CREDITS = "Nintendo";
-    public double getWeight()
-    {
-        return weight;
-    }
-
-    public void setWeight(double weight)
-    {
-        this.weight = weight;
-    }
-
     public Pokemon(String name, double height, double weight, String type, int combatPower, int hitPoints)
     {
         this.name = name;
@@ -30,6 +20,16 @@ public class Pokemon
         this.type = type;
         this.combatPower = combatPower;
         this.hitPoints = hitPoints;
+    }
+
+    public double getWeight()
+    {
+        return weight;
+    }
+
+    public void setWeight(double weight)
+    {
+        this.weight = weight;
     }
 
     public void printDetails()

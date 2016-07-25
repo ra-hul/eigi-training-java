@@ -1,4 +1,4 @@
-package com.endurance.training.java.basic.oops.pokemon;
+package com.endurance.training.java.basic.oops.pokemons;
 
 import com.endurance.training.java.basic.oops.attacks.Flamethrower;
 import com.endurance.training.java.basic.oops.attacks.IAttack;

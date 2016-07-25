@@ -15,9 +15,9 @@ public class WaterGun implements IAttack
     }
 
     @Override
-    public String doAttack()
+    public void doAttack()
     {
-        return "Woosh..";
+        System.out.println("Woosh..");
     }
 
     @Override

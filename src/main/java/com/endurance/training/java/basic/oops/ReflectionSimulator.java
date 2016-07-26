@@ -18,7 +18,6 @@ public class ReflectionSimulator
         Pokemon pikachu = new Pikachu();
         Method m = Pokemon.class.getDeclaredMethod("computeScore");
         m.setAccessible(true);
-        System.out.println(m.invoke(pikachu, null));
-
+        System.out.println(m.invoke(pikachu));
     }
 }

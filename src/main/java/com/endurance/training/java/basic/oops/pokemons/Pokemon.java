@@ -13,28 +13,28 @@ import java.util.Random;
  */
 public abstract class Pokemon implements IHealable, IAttacker, IDisplayable
 {
-    protected PokeDataBean pokéData;
+    protected PokeDataBean pokeData;
 
     public Pokemon(double height, double weight, String type, int combatPower, int hitPoints)
     {
-        this.pokéData = new PokeDataBean(height, weight, type, combatPower, hitPoints, getName());
+        this.pokeData = new PokeDataBean(height, weight, type, combatPower, hitPoints, getName());
     }
 
     public void printDetails()
     {
-        pokéData.printDetails();
+        pokeData.printDetails();
     }
 
     private Double computeScore()
     {
-        Double score = Math.sqrt(Math.pow(pokéData.getCombatPower(), 2) + Math.pow(pokéData.getHitPoints(), 2));
+        Double score = Math.sqrt(Math.pow(pokeData.getCombatPower(), 2) + Math.pow(pokeData.getHitPoints(), 2));
         return (double) Math.round(score);
     }
 
     public void heal()
     {
         IHealable.super.heal();
-        pokéData.setHealth(pokéData.getHitPoints());
+        pokeData.setHealth(pokeData.getHitPoints());
     }
 
     public void attack()
@@ -50,7 +50,7 @@ public abstract class Pokemon implements IHealable, IAttacker, IDisplayable
 
     public TradeMetrics getTradeMetrics()
     {
-        return new TradeMetrics(pokéData.hitPoints, pokéData.type, computeScore(), getName());
+        return new TradeMetrics(pokeData.hitPoints, pokeData.type, computeScore(), getName());
     }
 
     public static class TradeMetrics implements IDisplayable

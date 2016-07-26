@@ -27,7 +27,7 @@ public class PokeDex
         pokeDex.setPokemon3(squirtle);
         System.out.println("Credits: " + Pokemon.CREDITS + "\n\n");
         //pokeDex.updateWeight(40, pikachu);
-        //pokeDex.swapPokémon(pikachu);
+        //pokeDex.swapPokemon(pikachu);
         pokeDex.dumpData();
     }
 
@@ -72,14 +72,14 @@ public class PokeDex
         this.getPokemon3().printDetails();
     }
 
-    private void swapPokémon(Pokemon pokemon)
+    private void swapPokemon(Pokemon pokemon)
     {
         pokemon = new Pokemon("Charmander", 2.0, 25, "Fire", 22, 30);
     }
 
     private void printHeader()
     {
-        System.out.println("\n**Poké Data**");
+        System.out.println("\n**Poke Data**");
     }
 
     private void updateWeight(double weight, Pokemon pokemon)

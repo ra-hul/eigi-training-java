@@ -12,18 +12,18 @@ public class PokeSimulator
 {
     public static void main(String[] args)
     {
-        List<Pokemon> pokémons = new ArrayList<>();
-        pokémons.add(new Pikachu());
-        pokémons.add(new Charmander());
-        pokémons.add(new Squirtle());
-        pokémons.add(new Mew());
+        List<Pokemon> pokemons = new ArrayList<>();
+        pokemons.add(new Pikachu());
+        pokemons.add(new Charmander());
+        pokemons.add(new Squirtle());
+        pokemons.add(new Mew());
 
-        IAttacker attackingPokemon = pokémons.get(0);
+        IAttacker attackingPokemon = pokemons.get(0);
         attackingPokemon.attack();
 
-        IHealable woundedPokemon = pokémons.get(1);
+        IHealable woundedPokemon = pokemons.get(1);
         woundedPokemon.heal();
-        Pokemon pokemon = pokémons.get(3);
+        Pokemon pokemon = pokemons.get(3);
         pokemon.getTradeMetrics().printDetails();
         System.out.println(pokemon.getSound());
     }

@@ -1,8 +1,6 @@
 package com.endurance.training.java.basic.oops;
 
-import com.endurance.training.java.basic.oops.pokemon.Charmander;
-import com.endurance.training.java.basic.oops.pokemon.Pikachu;
-import com.endurance.training.java.basic.oops.pokemon.Pokemon;
+import com.endurance.training.java.basic.oops.pokemons.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +15,16 @@ public class PokeSimulator
         List<Pokemon> pokémons = new ArrayList<>();
         pokémons.add(new Pikachu());
         pokémons.add(new Charmander());
+        pokémons.add(new Squirtle());
+        pokémons.add(new Mew());
 
         IAttacker attackingPokemon = pokémons.get(0);
         attackingPokemon.attack();
+
+        IHealable woundedPokemon = pokémons.get(1);
+        woundedPokemon.heal();
+        Pokemon pokemon = pokémons.get(3);
+        pokemon.getTradeMetrics().printDetails();
+        System.out.println(pokemon.getSound());
     }
 }

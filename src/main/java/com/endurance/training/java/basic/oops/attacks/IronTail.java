@@ -15,9 +15,9 @@ public class IronTail implements IAttack
     }
 
     @Override
-    public String doAttack()
+    public void doAttack()
     {
-        return "bang!";
+        System.out.println("bang!");
     }
 
     @Override

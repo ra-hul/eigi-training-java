@@ -1,6 +1,6 @@
 package com.endurance.training.java.basic;
 
-public class Pokemon
+public class Pikachu
 {
 
     public static void main(String[] args)
@@ -11,7 +11,7 @@ public class Pokemon
         {
             name = args[0];
         }
-        new Pokemon().sayHello(name);
+        new Pikachu().sayHello(name);
     }
 
     public void sayHello(String name)

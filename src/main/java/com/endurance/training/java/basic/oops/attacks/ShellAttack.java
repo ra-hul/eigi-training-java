@@ -15,9 +15,9 @@ public class ShellAttack implements IAttack
     }
 
     @Override
-    public String doAttack()
+    public void doAttack()
     {
-        return "Dooing!";
+        System.out.println("Dooing!");
     }
 
     @Override

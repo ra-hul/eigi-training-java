@@ -9,6 +9,7 @@ public interface IHealable
     {
         try
         {
+            System.out.println("Putting Pokémon to sleep");
             Thread.sleep(10000);
         }
         catch (InterruptedException e)

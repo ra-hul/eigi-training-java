@@ -12,7 +12,7 @@ public interface IAttack
         return 0;
     }
 
-    String doAttack();
+    void doAttack();
 
     List<String> getEffectiveAgainstTypes();
 

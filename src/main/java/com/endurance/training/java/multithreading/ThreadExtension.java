@@ -1,5 +1,6 @@
 package com.endurance.training.java.multithreading;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -10,7 +11,7 @@ public class ThreadExtension
 {
     public static void main(String[] args) throws InterruptedException
     {
-        List<Integer> data = Arrays.asList(1, 2, 3);
+        List<Integer> data = new ArrayList<>(Arrays.asList(1, 2, 3));
         Thread t = new Thread(new SquareWorker(data));
         data.add(4);
         data.add(5);
@@ -37,7 +38,7 @@ public class ThreadExtension
         {
             for (Integer integer : payload)
             {
-                System.out.println("ThreadId" + Thread.currentThread().getId() + " " + Math.sqrt(integer));
+                System.out.println("ThreadId: " + Thread.currentThread().getId() + " " + Math.sqrt(integer));
                 try
                 {
                     Thread.sleep(1000);
@@ -64,7 +65,7 @@ public class ThreadExtension
 
             for (Integer integer : payload)
             {
-                System.out.println("ThreadId" + Thread.currentThread().getId() + " " + Math.pow(integer, 2));
+                System.out.println("ThreadId: " + Thread.currentThread().getId() + " " + Math.pow(integer, 2));
                 try
                 {
                     Thread.sleep(1000);
